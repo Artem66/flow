@@ -16,7 +16,7 @@ const styles = {
   },
 };
 
-class LoginUser extends React.Component {
+class LoginForm extends React.Component {
     render() {
       return (
         <div>
@@ -27,7 +27,6 @@ class LoginUser extends React.Component {
           floatingLabelText="Email"
           type="email"
           /><br />
-
           <TextField
           hintText="Password Field"
           floatingLabelText="Password"
@@ -39,7 +38,6 @@ class LoginUser extends React.Component {
             /><br />
           <RaisedButton label="login" primary={true} style={style} />
           </div>
-
         </MuiThemeProvider>
         </div>
       );
@@ -47,7 +45,7 @@ class LoginUser extends React.Component {
   }
 
 ReactDOM.render(
-  <LoginUser />,
+  <LoginForm />,
   document.getElementById('root')
 );
 
