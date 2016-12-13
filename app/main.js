@@ -1,13 +1,71 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {TextField, RaisedButton, Checkbox, AppBar} from 'material-ui';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-class Hello extends React.Component {
-  render() {
-    return <h1>Hello</h1>
+const style = {
+  margin: 12,
+};
+
+const styles = {
+  block: {
+    maxWidth: 250,
+  },
+  checkbox: {
+    marginBottom: 16,
+  },
+};
+
+class LoginUser extends React.Component {
+    render() {
+      return (
+        <div>
+        <MuiThemeProvider>
+          <div>
+          <TextField
+          hintText="Email Field"
+          floatingLabelText="Email"
+          type="email"
+          /><br />
+
+          <TextField
+          hintText="Password Field"
+          floatingLabelText="Password"
+          type="password"
+          /><br />
+          <Checkbox
+            label="Remember me"
+            style={styles.checkbox}
+            /><br />
+          <RaisedButton label="login" primary={true} style={style} />
+          </div>
+
+        </MuiThemeProvider>
+        </div>
+      );
+    }
+  }
+
+ReactDOM.render(
+  <LoginUser />,
+  document.getElementById('root')
+);
+
+class Menu extends React.Component {
+  render () {
+    return (
+
+        <MuiThemeProvider>
+          <AppBar
+            title="Title"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+          />
+        </MuiThemeProvider >
+      );
   }
 }
 
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('root')
+ReactDOM.render (
+  <Menu />,
+  document.getElementById ('menu')
 );
