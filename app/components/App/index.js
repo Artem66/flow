@@ -5,14 +5,14 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const App = () => {
-  injectTapEventPlugin();
-  return (
-    <MuiThemeProvider>
-      <div>
-          <Nav />
-          <LoginForm />
-      </div>
-    </MuiThemeProvider>
-  )}
-
+    injectTapEventPlugin();
+    return (
+        <MuiThemeProvider>
+            <div>
+                <Nav />
+                <LoginForm />
+            </div>
+        </MuiThemeProvider>
+  );
+};
 export default App;
