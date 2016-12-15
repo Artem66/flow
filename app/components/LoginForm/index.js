@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import { TextField, FlatButton, Checkbox } from 'material-ui';
+import { TextField, RaisedButton, Checkbox, Divider, Paper } from 'material-ui';
 
 class LoginForm extends Component {
     render() {
         return (
-            <div>
+            <Paper zDepth={2}>
                 <TextField
-                    hintText="Email Field"
-                    floatingLabelText="Email"
-                    type="email"
+                    hintText="Email address"
+                    underlineShow={false}
                 />
-                <br />
+                <Divider />
                 <TextField
-                    hintText="Password Field"
-                    floatingLabelText="Password"
-                    type="password"
+                    hintText="Password"
+                    underlineShow={false}
                 />
-                <br />
+                <Divider />
                 <Checkbox
                     label="Remember me"
                 />
-                <br />
-                <FlatButton label="Primary" primary />
-            </div>
+                <RaisedButton
+                    label="Login"
+                    primary
+                />
+            </Paper>
     );
     }
 }
