@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextField, RaisedButton, Checkbox, Divider, Paper } from 'material-ui';
+import { TextField, RaisedButton, Checkbox, Paper } from 'material-ui';
 
 class LoginForm extends Component {
     render() {
@@ -7,14 +7,13 @@ class LoginForm extends Component {
             <Paper zDepth={2}>
                 <TextField
                     hintText="Email address"
-                    underlineShow={false}
+                    type="mail"
                 />
-                <Divider />
+                <br />
                 <TextField
                     hintText="Password"
-                    underlineShow={false}
+                    type="password"
                 />
-                <Divider />
                 <Checkbox
                     label="Remember me"
                 />
