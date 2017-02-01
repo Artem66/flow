@@ -8,7 +8,7 @@ const webpackConfig = {
         }
     },
     entry: [
-        path.resolve(__dirname, './app/main.js')
+        path.resolve(__dirname, './app')
     ],
     assets: {
         quiet: true,
