@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { AppBar } from 'material-ui';
 
-class Menu extends Component {
-    render() {
-        return (
-            <AppBar
-                title="Title"
-                iconClassNameRight="muidocs-icon-navigation-expand-more"
-            />
-        );
-    }
-}
-
-export default Menu;
+export default () => (
+    <AppBar
+        title="Title"
+        iconClassNameRight="muidocs-icon-navigation-expand-more"
+    />
+);
