@@ -32,6 +32,8 @@
     "eslint-plugin-react": "^5.1.1"
   },
   "dependencies": {
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
     "material-ui": "^0.16.5",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
