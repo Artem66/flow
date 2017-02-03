@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from '../Nav';
-import LoginForm from '../LoginForm';
+import Menu from '../Menu';
 import Footer from '../Footer';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -8,7 +8,7 @@ export default () => (
     <MuiThemeProvider>
         <div>
             <Nav />
-            <LoginForm />
+            <Menu />
             <Footer />
         </div>
     </MuiThemeProvider>
