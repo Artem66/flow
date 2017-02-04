@@ -6,7 +6,7 @@ dotenv.load();
 
 const PORT = process.env.PORT || 5000;
 
-var server = new Hapi.Server();
+const server = new Hapi.Server();
 
 server.connection({ port: PORT });
 
@@ -25,7 +25,8 @@ if (process.env.NODE_ENV === 'development') {
         options: {
             compiler,
             assets: devConfig.assets
-        }
+        },
+        hot: {}
     });
 }
 
@@ -35,16 +36,20 @@ server.register(hapiPlugins, (error) => {
     server.route([{
         method: 'GET',
         path: '/{param*}',
-        handler: {
-            directory: {
-                path: '.',
-                index: ['index.html']
-            }
-        }
+        handler: (req, reply) => reply(`
+            <html>
+              <head>
+                <meta charset="utf-8">
+              </head>
+              <body>
+                <div id="root"></div>
+                <script src="build/main.bundle.js"></script>
+              </body>
+            </html>
+        `)
     }]);
 
     return server.start((err) => {
         if (err) throw err;
-        console.log('Server running at:', server.info.uri);
     });
 });
