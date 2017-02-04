@@ -1,9 +1,9 @@
-import { React, PropTypes } from 'react';
+import React from 'react';
 import Nav from '../Nav';
 import Footer from '../Footer';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-const App = (props) => (
+export default (props) => (
     <MuiThemeProvider>
         <div>
             <Nav />
@@ -14,9 +14,3 @@ const App = (props) => (
         </div>
     </MuiThemeProvider>
 );
-
-App.propTypes = {
-    children: PropTypes.node.isRequired
-};
-
-export default App;
