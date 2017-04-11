@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sth-fish/todolist-web.git"
+    "url": "git+https://github.com/Artem66/flow.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sth-fish/todolist-web/issues"
+    "url": "https://github.com/Artem66/flow/issues"
   },
-  "homepage": "https://github.com/sth-fish/todolist-web#readme",
+  "homepage": "https://github.com/Artem66/flow#readme",
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
@@ -39,7 +39,9 @@
     "material-ui": "^0.16.5",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-redux": "^5.0.4",
     "react-router": "^3.0.0",
+    "redux": "^3.6.0",
     "webpack": "^1.13.3"
   }
 }

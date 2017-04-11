@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, List, ListItem, RaisedButton, TimePicker, DatePicker } from 'material-ui';
+import { TextField, List, ListItem, RaisedButton, TimePicker, DatePicker, SelectField, MenuItem } from 'material-ui';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionToday from 'material-ui/svg-icons/action/today';
 import ActionViewWeek from 'material-ui/svg-icons/action/view-week';
@@ -40,6 +40,16 @@ export default () => (
             <TimePicker
                 hintText="at..."
             />
+            <SelectField
+                floatingLabelText="Remind me"
+            >
+                <MenuItem value={1} primaryText="before 15 minutes" />
+                <MenuItem value={2} primaryText="before 30 minutes" />
+                <MenuItem value={3} primaryText="before 1 hour" />
+                <MenuItem value={4} primaryText="before 2 hours" />
+                <MenuItem value={5} primaryText="before 1 day" />
+            </SelectField>
+            <br />
             <RaisedButton
                 label="Add"
                 primary
