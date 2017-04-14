@@ -4,7 +4,7 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionToday from 'material-ui/svg-icons/action/today';
 import ActionViewWeek from 'material-ui/svg-icons/action/view-week';
 import { connect } from 'react-redux';
-import { addReminder, deleteReminder } from '../../actions';
+import { addReminder, deleteReminder, clearReminders } from '../../actions';
 import moment from 'moment';
 
 const styles = {
@@ -120,11 +120,16 @@ class TaskForm extends Component {
                     </SelectField>
                     <br />
                     <RaisedButton
-                        label="Add"
+                        label="Add task"
                         primary
                         onClick={() => this.addReminder()}
                     />
                     {this.renderReminders()}
+                    <RaisedButton
+                        label="Remove all"
+                        secondary
+                        onClick={() => this.props.clearReminders()}
+                    />
                 </div>
             </div>
         );
@@ -137,4 +142,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, { addReminder, deleteReminder })(TaskForm);
+export default connect(mapStateToProps, { addReminder, deleteReminder, clearReminders })(TaskForm);
