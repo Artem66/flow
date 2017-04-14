@@ -28,27 +28,27 @@ class TaskForm extends Component {
             text: '',
             dueDate: null,
             dueTime: null,
-            dueValue: null,
-        }
+            dueValue: null
+        };
     }
 
-    handleChangeDate (event, date){
-      this.setState({
-      dueDate: date,
-    });
-  };
+    handleChangeDate(event, date) {
+        this.setState({
+            dueDate: date
+        });
+    }
 
-  handleChangeTime (event, time){
-    this.setState({
-    dueTime: time,
-  });
-  };
+    handleChangeTime(event, time) {
+        this.setState({
+            dueTime: time
+        });
+    }
 
-    handleChangeValue (event, index, value){
-      this.setState({
-        dueValue: value,
-      });
-    };
+    handleChangeValue(event, index, value) {
+        this.setState({
+            dueValue: value
+        });
+    }
 
     addReminder() {
         console.log('this.state.dueDate', this.state.dueDate);
@@ -99,12 +99,12 @@ class TaskForm extends Component {
                     <DatePicker
                         hintText="it'll be..."
                         mode="landscape"
-                        value={ this.state.dueDate }
+                        value={this.state.dueDate}
                         onChange={(event, date) => this.handleChangeDate(event, date)}
                     />
                     <TimePicker
                         hintText="at..."
-                        value={ this.state.dueTime }
+                        value={this.state.dueTime}
                         onChange={(event, time) => this.handleChangeTime(event, time)}
                     />
                     <SelectField
@@ -124,7 +124,7 @@ class TaskForm extends Component {
                         primary
                         onClick={() => this.addReminder()}
                     />
-                    { this.renderReminders() }
+                    {this.renderReminders()}
                 </div>
             </div>
         );
