@@ -10,6 +10,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers';
+import styles from './styles/index.css';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941

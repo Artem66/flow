@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.left-menu {
+    flex-grow: 1;
+}
+
+.task-form {
+    flex-grow: 11;
+}
+
+.task-list {
+    padding: 0;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list div {
+    display:inline-block;
+    margin:5px;
+    padding: 5px;
+    font-size: inherit;
+}

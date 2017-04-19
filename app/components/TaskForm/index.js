@@ -7,20 +7,6 @@ import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../../actions';
 import moment from 'moment';
 
-const styles = {
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center'
-    },
-    leftMenu: {
-        flexGrow: 1
-    },
-    taskForm: {
-        flexGrow: 11
-    }
-};
-
 class TaskForm extends Component {
     constructor(props) {
         super(props);
@@ -62,11 +48,11 @@ class TaskForm extends Component {
     renderReminders() {
         const { reminders } = this.props;
         return (
-            <ul>
+            <ul className="task-list">
             {
                 reminders.map(reminder => {
                     return (
-                        <li key={reminder.id}>
+                        <li key={reminder.id} className='list'>
                             <div>{reminder.text}</div>
                             <div><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
                             <div
@@ -82,15 +68,15 @@ class TaskForm extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
-                <div style={styles.leftMenu}>
+            <div className="container">
+                <div className="left-menu">
                     <List>
                         <ListItem primaryText="Tasks" leftIcon={<ContentInbox />} />
                         <ListItem primaryText="Today" leftIcon={<ActionToday />} />
                         <ListItem primaryText="Week" leftIcon={<ActionViewWeek />} />
                     </List>
                 </div>
-                <div style={styles.taskForm}>
+                <div className="task-form">
                     <TextField
                         hintText="My task"
                         fullWidth
